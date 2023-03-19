@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'location.dart';
 
-
 const apiKey = "write your own weatherAPI key";
 
 class WeatherDisplayData {
@@ -59,7 +58,7 @@ class WeatherData {
           weatherImage: const AssetImage("assets/kapali.jpg"));
     } else {
       var now = DateTime.now();
-      if (now.hour >= 19) {
+      if (now.hour >= 19 || now.hour < 6) {
         return WeatherDisplayData(
             weatherIcon: const Icon(
               FontAwesomeIcons.moon,
